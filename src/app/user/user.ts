@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Card } from "../shared/card/card";
 
 type User = {
     id: string; 
@@ -10,6 +11,7 @@ type User = {
   selector: 'app-user',
   templateUrl: './user.html',
   styleUrl: './user.css',
+  imports: [Card],
 })
 export class UserComponent {
   @Input({required: true}) user!: User;
