@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Card } from "../../shared/card/card";
+import { DatePipe } from '@angular/common';
 
 type Task = {
   id: string,
@@ -11,7 +12,7 @@ type Task = {
 
 @Component({
   selector: 'app-task',
-  imports: [Card],
+  imports: [Card, DatePipe],
   templateUrl: './task.html',
   styleUrl: './task.css',
 })
